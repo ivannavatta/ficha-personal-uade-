@@ -16,6 +16,10 @@ main {
   flex: 1;
 }
 header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     background-color: #1a1a1a;
     top: 0;
 }
@@ -69,6 +73,11 @@ header h1 {
     color: #e50914;
 }
 
+.datos-container .datos p {
+    color: #fdf8f8;
+    font-weight: bold;
+}
+
 .pages-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -100,13 +109,51 @@ header h1 {
     border-radius: 10px;
 }
 
+footer {
+    background-color: #1a1a1a;
+}
+
 footer p {
     margin: 0;
     padding: 10px;
     text-align: center;
-    background-color: #1a1a1a;
     color: #fff;
 }
+
+/* ------------------------------------------------------- */
+/* MODO CLARO
+/* ------------------------------------------------------- */
+body:not(.dark-mode) {
+  background-color: white;
+  color: black;
+}
+
+body:not(.dark-mode) header,
+body:not(.dark-mode) footer {
+  background-color: #031926;
+}
+
+body:not(.dark-mode) .section-principal .presentacion h2,
+body:not(.dark-mode) .datos-container .datos h3 {
+    color: #468189;
+}
+
+body:not(.dark-mode) .presentacion img {
+  border-color: #031926;
+}
+
+body:not(.dark-mode) .datos {
+  background-color: #9dbebb;
+}
+
+body:not(.dark-mode) .pages {
+  background-color: #9dbebb;
+}
+
+body:not(.dark-mode) .pages a {
+  color: #ffff;
+}
+
 
 @media (max-width: 1024px) {
     .pages-container {
